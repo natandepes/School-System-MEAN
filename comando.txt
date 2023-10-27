@@ -1,0 +1,1 @@
+C:\"Program Files"\PROGRAMAS\MongoDB\Server\5.0\bin\mongod --dbpath "C:\Users\alunolab06\Desktop\03-seed-project - Aluno\03-seed-project - Aluno\seed-project\data\db"

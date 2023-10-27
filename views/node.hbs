@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <base href="/">
+    <title>Angular Messenger</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+</head>
+<body>
+<h1>VW Polo 2024</h1>
+<h2>Eu daria muita coisa por esse carro</h2>
+<form action="/carro" method="post">
+    <h4>Escreva as especificações desejadas:</h4>
+    <input type="text" name="especificacoes">
+    <button type="submit">Enviar</button>
+</form>
+<a href="/"><button>Voltar</button></a>
+{{sentMsg}}
+
+<script src="/js/app/bundle.js"></script>
+</body>
+</html> 

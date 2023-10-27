@@ -1,0 +1,12 @@
+<div class="login-container">
+    <div class="back-arrow">
+        <a routerLink="/login"><</a>
+    </div>
+    <form class="login-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <h2>Sign up</h2>
+        <input type="text" id="username" formControlName="username" placeholder="Username" required>
+        <input type="password" id="password" formControlName="password" placeholder="Password" required>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm Your Password" required>
+        <button type="submit">Create Account</button>
+    </form>
+</div>
