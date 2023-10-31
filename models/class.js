@@ -1,4 +1,3 @@
-const { shift } = require('core-js/core/array');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -9,7 +8,7 @@ var schema = new Schema({
     frequency: {type: String, required: true},
     dateBegin: {type: Date, required: true},
     dateEnd: {type: String, required: false},
-    status
+    status: {type: String, required: true},
 });
 
-module.exports = mongoose.model('Message', schema);
+module.exports = mongoose.model('Class', schema);
