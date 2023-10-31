@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var schema = new Schema({
-    id: {type: Schema.Types.ObjectId},
     cpf: {type: String, required: true},
     nome: {type: String, required: true},
     adress: {type: String, required: true},
