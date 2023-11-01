@@ -1,6 +1,6 @@
 <div class="container" *ngFor="let msg of listMessages">
     <div class="comment">
         <p class="user">Mensagem {{ listMessages.indexOf(msg) + 1 }}</p>
-        <p>{{ msg }}</p>
+        <p>{{ msg.content }}</p>
     </div>
 </div>

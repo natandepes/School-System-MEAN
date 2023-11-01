@@ -10,7 +10,12 @@ export class MessangerService {
     constructor(private http: Http) { }
 
     getMessages(){
-        return this.messages ? this.messages.slice() : [];
+
+        return this.http.get('http://localhost:3000/message')
+        .map((response: Response) => response.json())
+        .catch((response: Response) => Observable.throw(response.json()));
+
+        // return this.messages ? this.messages.slice() : [];
     }
 
     addMessage(message: string){

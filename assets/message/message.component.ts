@@ -8,7 +8,7 @@ import { MessangerService } from "../../services/messanger.service";
 })
 export class MessageComponent{
 
-    messages: string[];
+    messages: any;
 
     constructor(
         private messangerService: MessangerService
@@ -19,7 +19,13 @@ export class MessageComponent{
        this.getMessages();
     }
 
-    getMessages(){
-        this.messages = this.messangerService.getMessages();
+    async getMessages(){
+        this.messangerService.getMessages()
+        .subscribe
+        (
+            dadosSucesso => this.messages = dadosSucesso.messages,
+            dadosErro => console.log('Erro Get Msgs Front:', dadosErro)
+        )
+        
     }
 }

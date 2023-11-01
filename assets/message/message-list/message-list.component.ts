@@ -8,6 +8,6 @@ import { MessangerService } from '../../../services/messanger.service';
 })
 export class MessageListComponent {
     
-    @Input() listMessages: string[];
+    @Input() listMessages: any;
 
 }

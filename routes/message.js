@@ -31,4 +31,27 @@ router.post('/', async (req, res, next) => {
 
 });
 
+
+router.get('/', async (req, res, next) => {
+    console.log('buscando messages');
+
+    try
+    {
+        const msgs = await Message.find();
+
+        return res.status(200).json({
+            title: 'Mensagens recuperadas com sucesso!',
+            messages: msgs
+        });
+    }
+    catch(err)
+    {
+        return res.status(500).json({
+            title: 'Um erro inesperado aconteceu ao tentar buscar as mensagens!',
+            error: err
+        });
+    }
+});
+
+
 module.exports = router;
