@@ -1,5 +1,9 @@
 <div class="student-container">
-    <h2>Perfil do Aluno</h2>
+  <div class="icons">
+    <span class="icon-pencil"></span>
+    <span class="icon-close"></span>
+  </div>
+  <h2>Perfil do Aluno</h2>
     <div class="student-info">
       <div class="student-detail">
         <label>CPF:</label>
@@ -29,7 +33,7 @@
     <div class="student-subjects">
       <h3>Matérias</h3>
       <ul>
-        <li *ngFor="let subject of aluno.subjects">{{aluno.subjects}}</li>
+        <li *ngFor="let subject of aluno.subjects">{{subject}}</li>
       </ul>
     </div>
     
