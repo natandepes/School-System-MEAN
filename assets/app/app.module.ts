@@ -15,8 +15,12 @@ import { SignUpComponent } from '../sign-up/sign-up.component';
 import { HeaderComponent } from '../header/header.component';
 import { StudentComponent } from '../student/student.component';
 import { SubjectComponent } from '../subject/subject.component';
+import { StudentProfileComponent } from '../student/student-profile/student-profile.component';
+import { StudentEditComponent } from '../student/student-edit/student-edit.component';
 
 import { routes } from './app-routes';
+
+
 
 
 
@@ -30,7 +34,10 @@ import { routes } from './app-routes';
         LoginComponent,
         SignUpComponent,
         StudentComponent,
-        SubjectComponent
+        SubjectComponent,
+        StudentProfileComponent,
+        StudentEditComponent
+
     ],
     imports: [
         BrowserModule,
