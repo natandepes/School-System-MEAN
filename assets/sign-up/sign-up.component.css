@@ -27,7 +27,8 @@ h2 {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -65,3 +66,15 @@ button:hover {
     font-size: 20px;
 }
 
+select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+  
+option {
+    color: #444;
+    opacity: 10%;
+}

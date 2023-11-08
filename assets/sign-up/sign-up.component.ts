@@ -14,7 +14,12 @@ export class SignUpComponent {
 
     constructor(private authService: AuthService, private formBuilder: FormBuilder) {
         this.signUpForm = this.formBuilder.group({
-            username: ['', Validators.required],
+            cpf: ['', [Validators.required, Validators.minLength(11), Validators.maxLength(11)]],
+            name: ['', Validators.required],
+            adress: ['', Validators.required],
+            telephone: ['', Validators.required],
+            email: ['', [Validators.required, Validators.email]],
+            gender: ['', Validators.required],
             password: ['', Validators.required],
             confirmPassword: ['', Validators.required]
         });
@@ -23,15 +28,14 @@ export class SignUpComponent {
     createAccount(username: string, password: string)
     {
         this.authService.createUser(username, password)
-        .subscribe();
+        .subscribe(
+            dadosSucesso => console.log('Dados Sucesso Sign Up:', dadosSucesso),
+            dadosErro => console.log('Dados Erro Sign Up:', dadosErro)
+        );
     }
 
     onSubmit(){
-
-        let usr: string = this.signUpForm.get('username').value;
-        let pwd: string = this.signUpForm.get('password').value;
-
-        this.createAccount(usr, pwd);
-    }
-    
+        // let pwd: string = this.signUpForm.get('password').value;
+        // this.createAccount(usr, pwd);
+    }  
 }

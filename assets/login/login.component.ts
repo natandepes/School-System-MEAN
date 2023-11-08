@@ -22,7 +22,7 @@ export class LoginComponent {
     }
     
     onSubmit(){
-        this.router.navigate(['/message']);
+        this.router.navigate(['/messages']);
         this.login.emit();
     }
 }

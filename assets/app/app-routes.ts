@@ -8,7 +8,7 @@ import { SubjectComponent } from '../subject/subject.component';
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignUpComponent }, 
-  { path: 'message', component: MessageComponent },
+  { path: 'messages', component: MessageComponent },
   { path: 'aluno', component: StudentComponent },
   { path: 'materias', component: SubjectComponent },
   { path: '', redirectTo: '/login', pathMatch:'full' }

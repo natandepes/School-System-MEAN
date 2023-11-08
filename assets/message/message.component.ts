@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { MessangerService } from "../../services/messanger.service";
 
 @Component({
@@ -6,7 +6,7 @@ import { MessangerService } from "../../services/messanger.service";
     templateUrl: './message.component.html',
     styleUrls: ['./message.component.css']
 })
-export class MessageComponent{
+export class MessageComponent implements OnInit {
 
     messages: any;
 
@@ -19,7 +19,7 @@ export class MessageComponent{
        this.getMessages();
     }
 
-    async getMessages(){
+    getMessages(){
         this.messangerService.getMessages()
         .subscribe
         (

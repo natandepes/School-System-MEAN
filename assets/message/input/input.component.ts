@@ -25,15 +25,13 @@ export class InputComponent {
     addMessage(msg: string){
         this.messangerService.addMessage(msg)
         .subscribe
-        (
-            dadosSucesso => console.log('Dados sucesso:', dadosSucesso),
-            dadosErro => console.log('Dados Erro:', dadosErro)
-        );
+        ();
     }
 
     onSubmit(){
         const form = this.messageForm.value;
         this.addMessage(form.mensagem);
+        this.messageForm.reset();
         this.enviar.emit();
     }
 }
