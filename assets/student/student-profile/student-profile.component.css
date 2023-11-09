@@ -35,7 +35,7 @@
   }
   
   .student-info {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
   }
     
@@ -45,7 +45,8 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 5px;
-    text-align: center;
+    text-align: left;
+    display: flex;
   }
   
   .student-detail label {
