@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "../../services/auth.service";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators, ValidatorFn, AbstractControl } from "@angular/forms";
 
 @Component({
     selector: 'app-sign-up',
@@ -22,8 +22,37 @@ export class SignUpComponent {
             gender: ['', Validators.required],
             password: ['', Validators.required],
             confirmPassword: ['', Validators.required]
-        });
+        }, { validator: this.passwordMatchValidator() });
     }
+
+    passwordMatchValidator(): ValidatorFn {
+        return (control: FormGroup): { [key: string]: any } | null => {
+          const password = control.get('password');
+          const confirmPassword = control.get('confirmPassword');
+      
+          if (password && confirmPassword && password.value !== confirmPassword.value) {
+            confirmPassword.setErrors({ passwordMismatch: true });
+            return { passwordMismatch: true };
+          } else {
+            return null;
+          }
+        };
+    }
+
+    onKeyPress(event: KeyboardEvent) {
+
+        // if (field === 'cpf' && event.target['value'].length >= maxLength) {
+        //     event.preventDefault();
+        //     return false;
+        // }
+
+        const regex = /[0-9]|\./;
+        const key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+        if (!regex.test(key)) {
+          event.preventDefault();
+          return false;
+        }
+      }
 
     createAccount(username: string, password: string)
     {

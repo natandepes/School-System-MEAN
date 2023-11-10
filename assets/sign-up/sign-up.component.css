@@ -35,6 +35,13 @@ input[type="email"] {
     border: 1px solid #ddd;
 }
 
+select.ng-invalid.ng-touched,
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+
+
 button {
     padding: 10px;
     border-radius: 5px;
@@ -77,4 +84,11 @@ select {
 option {
     color: #444;
     opacity: 10%;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-top: -15px; 
 }
