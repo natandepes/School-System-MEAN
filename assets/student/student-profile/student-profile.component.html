@@ -1,40 +1,35 @@
 <div class="student-container">
-    <div class="icons">
-      <a class="icon-pencil" routerLink="/student-edit"></a>
-    </div>
-    <h2>Perfil do Aluno</h2>
-      <div class="student-info">
-        <div class="student-detail">
-          <label>CPF:</label>
-          <span>{{aluno.cpf}}</span>
-        <!-- </div> -->
-        <!-- <div class="student-detail"> -->
-          <label>Nome:</label>
-          <span>{{aluno.nome}}</span>
-        <!-- </div> -->
-        <!-- <div class="student-detail"> -->
-          <label>Endereço:</label>
-          <span>{{aluno.adress}}</span>
-        <!-- </div> -->
-        <!-- <div class="student-detail"> -->
-          <label>Telefone:</label>
-          <span>{{aluno.telephone}}</span>
-        <!-- </div> -->
-       <!-- <div class="student-detail"> -->
-          <label>Email:</label>
-          <span>{{aluno.email}}</span>
-        <!-- </div> -->
-        <!-- <div class="student-detail"> -->
-          <label>Gênero:</label>
-          <span>{{aluno.gender}}</span>
-        </div>
+  <div class="icons">
+    <a class="icon-pencil" routerLink="/student-edit"></a>
+  </div>
+  <h2>Perfil do Aluno</h2>
+    <div class="student-info">
+      <div class="student-detail">
+        <label>CPF:</label>
+        <span>{{aluno.cpf}}</span>
       </div>
-      <div class="student-subjects">
-        <h3>Matérias</h3>
-        <ul>
-          <li *ngFor="let subject of aluno.subjects">{{subject}}</li>
-        </ul>
+      <div class="student-detail">
+        <label>Nome:</label>
+        <span>{{aluno.nome}}</span>
       </div>
-      
+      <div class="student-detail">
+        <label>Endereço:</label>
+        <span>{{aluno.adress}}</span>
+      </div>
+      <div class="student-detail">
+        <label>Telefone:</label>
+        <span>{{aluno.telephone}}</span>
+      </div>
+      <div class="student-detail">
+        <label>Email:</label>
+        <span>{{aluno.email}}</span>
+      </div>
+      <div class="student-detail">
+        <label>Gênero:</label>
+        <span>{{aluno.gender}}</span>
+      </div>
     </div>
-    
+    <div class="student-subjects">
+        <button routerLink="/subject">Matérias</button>
+    </div>
+  </div>
