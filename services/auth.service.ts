@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
-import { Http, Response } from "@angular/http";
+import { Http, Response, Headers } from "@angular/http";
 import { Observable } from "rxjs";
+import { Student } from "../models-ts/student";
 
 @Injectable()
 export class AuthService {
@@ -13,11 +14,13 @@ export class AuthService {
 
     }
 
-    createUser(username: string, password: string){
+    createUser(student: Student){
 
-        let body = JSON.stringify({username, password});
+        const bodyReq = JSON.stringify(student);
+
+        const headersReq = new Headers({'Content-Type' : 'application/json'});
         
-        return this.http.post('http://localhost:3000/sign-up', body)
+        return this.http.post('http://localhost:3000/register', bodyReq, {headers: headersReq})
         .map((response: Response) => response.json())
         .catch((err: Response) => Observable.throw(err.json()));
 

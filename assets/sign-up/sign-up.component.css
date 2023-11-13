@@ -46,12 +46,32 @@ button {
     padding: 10px;
     border-radius: 5px;
     border: none;
-    background-color: #4caf50;
-    color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s ease;  /* Adiciona uma transição suave */
 }
 
-button:hover {
+button:disabled {
+    background-color: #ccc;  /* Cor de fundo quando desativado */
+    cursor: not-allowed;    /* Altera o cursor quando desativado */
+    transition: background-color 0.3s ease;  /* Adiciona uma transição suave */
+}
+
+button:hover:enabled {
+    background-color: #45a049;  /* Cor de fundo ao passar o mouse quando ativado */
+}
+
+/* Estilos adicionais para o botão desativado */
+.disabled-button {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilos adicionais para o botão ativado */
+.active-button {
+    background-color: #4caf50;
+}
+
+.active-button:hover {
     background-color: #45a049;
 }
 

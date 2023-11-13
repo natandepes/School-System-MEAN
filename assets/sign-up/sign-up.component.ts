@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "../../services/auth.service";
 import { FormBuilder, FormGroup, Validators, ValidatorFn, AbstractControl } from "@angular/forms";
+import { Student } from "../../models-ts/student";
 
 @Component({
     selector: 'app-sign-up',
@@ -41,30 +42,41 @@ export class SignUpComponent {
 
     onKeyPress(event: KeyboardEvent) {
 
-        // if (field === 'cpf' && event.target['value'].length >= maxLength) {
-        //     event.preventDefault();
-        //     return false;
-        // }
-
-        const regex = /[0-9]|\./;
-        const key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-        if (!regex.test(key)) {
-          event.preventDefault();
-          return false;
-        }
+      const regex = /[0-9]|\./;
+      const key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+      if (!regex.test(key)) {
+        event.preventDefault();
+        return false;
       }
-
-    createAccount(username: string, password: string)
-    {
-        this.authService.createUser(username, password)
-        .subscribe(
-            dadosSucesso => console.log('Dados Sucesso Sign Up:', dadosSucesso),
-            dadosErro => console.log('Dados Erro Sign Up:', dadosErro)
-        );
     }
 
+
+    newStudent(formValue: any){
+
+      const st: Student = new Student();
+
+      st.name = formValue.name;
+      st.adress = formValue.adress;
+      st.telephone = formValue.telephone;
+      st.email = formValue.email;
+      st.gender = formValue.gender;
+      st.password = formValue.password;
+
+      return st;
+    }
+
+
+
     onSubmit(){
-        // let pwd: string = this.signUpForm.get('password').value;
-        // this.createAccount(usr, pwd);
+      const form = this.signUpForm.value;
+      
+      console.log('Student:', this.newStudent(form));
+
+      this.authService.createUser(this.newStudent(form))
+      .subscribe
+      (
+        dadosSucesso => console.log('Cadastro Sucesso:', dadosSucesso),
+        dadosErro => console.log('Cadastro Erro:', dadosErro)
+      );
     }  
 }

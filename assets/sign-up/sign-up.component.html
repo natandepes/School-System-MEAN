@@ -179,6 +179,6 @@
         </span>
 
 
-        <button type="submit">Criar Conta</button>
+        <button type="submit" [ngClass]="{'disabled-button': signUpForm.invalid, 'active-button': signUpForm.valid}" [disabled]="!signUpForm.valid">Criar Conta</button>
     </form>
 </div>

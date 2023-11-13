@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
 var messageRoutes = require('./routes/message');
-var signUpRoutes = require('./routes/sign-up');
+var registerRoutes = require('./routes/register');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/node-angular');
@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/sign-up', signUpRoutes);
+app.use('/register', registerRoutes);
 app.use('/message', messageRoutes);
 app.use('/', appRoutes);
 

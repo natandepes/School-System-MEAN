@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-var User = require('../models/user');
+var Student = require('../models/student');
 
 router.post('/', (req, res, next) => {
     
-    console.log('req body user: ', req.body);
+    console.log('req body student: ', req.body);
+
 
     // var user = new User({
     //     username: req.body.username,
