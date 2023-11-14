@@ -55,6 +55,7 @@ export class SignUpComponent {
 
       const st: Student = new Student();
 
+      st.cpf = formValue.cpf;
       st.name = formValue.name;
       st.adress = formValue.adress;
       st.telephone = formValue.telephone;

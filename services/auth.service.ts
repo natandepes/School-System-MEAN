@@ -9,11 +9,6 @@ export class AuthService {
     constructor(private http: Http) { }
 
 
-    getUsers()
-    {
-
-    }
-
     createUser(student: Student){
 
         const bodyReq = JSON.stringify(student);
@@ -24,5 +19,28 @@ export class AuthService {
         .map((response: Response) => response.json())
         .catch((err: Response) => Observable.throw(err.json()));
 
+    }
+
+    getUsers(){
+
+        return this.http.get('http://localhost:3000/register')
+        .map((response: Response) => response.json())
+        .catch((err: Response) => Observable.throw(err.json()));
+
+    }
+
+
+    mapUser(user: any){
+        const st: Student = new Student();
+
+        st.cpf = user.cpf;
+        st.adress = user.adress;
+        st.email = user.email;
+        st.gender = user.gender;
+        st.name = user.name;
+        st.password = user.password;
+        st.telephone = user.telephone;
+
+        return st;
     }
 }

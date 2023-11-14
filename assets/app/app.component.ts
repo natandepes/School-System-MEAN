@@ -3,6 +3,7 @@ import { MessangerService } from '../../services/messanger.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { AuthService } from '../../services/auth.service';
+import { Student } from '../../models-ts/student';
 
 @Component({
     selector: 'my-app',
@@ -15,6 +16,7 @@ export class AppComponent implements OnInit {
         author: 'Natan Depes'
     }
 
+    currentUser: Student;
     showHeader: boolean = false;
     authList: string[] = ['/', '/login', '/sign-up'];
     currentRoute: string;
@@ -23,7 +25,7 @@ export class AppComponent implements OnInit {
     constructor(private router: Router) { }
 
     onLogin(){
-        this.loggedIn = true;
+        console.log('TESTE');
     }
 
     ngOnInit(): void {

@@ -8,6 +8,7 @@ var schema = new Schema({
     telephone: {type: String, required: true},
     email: {type: String, required: true},
     gender: {type: String, required: false},
+    password: {type: String, required: true},
     subjects: [{type: Schema.Types.ObjectId, required: true }]
 });
 
