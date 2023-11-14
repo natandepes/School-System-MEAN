@@ -15,8 +15,6 @@ export const routes: Routes = [
   { path: 'aluno', component: StudentComponent },
   { path: 'materias', component: SubjectComponent },
   {path: 'student-edit', component: StudentEditComponent},
-  {path: 'student-profile', component: StudentProfileComponent},
-  {path: 'subject', component: SubjectComponent},
   { path: '', redirectTo: '/login', pathMatch:'full' }
  
 ];
