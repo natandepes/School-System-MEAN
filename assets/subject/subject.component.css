@@ -1,75 +1,89 @@
 .subject-container {
-    position: relative;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    margin-top: 15%;
-  }
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-top: 15%;
+}
+
+.icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.icon-pencil,
+.icon-close {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.icon-pencil::before {
+  content: '\270E'; /* Unicode do ícone de lápis */
+  font-size: 20px;
+  color: #014991; /* Azul escuro */
+}
+
+.icon-close::before {
+  content: '\2716'; /* Unicode do ícone de X */
+  font-size: 20px;
+  color: #990000; /* Vermelho escuro */
+}
+
+.subject-info {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  flex-direction: column;
+  padding: 10px;
+}
+
+
+.subject-detail {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: left;
+  font-size: 18px;
+}
+
+
+.subject-list {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.subject-list h3 {
+  color: #333;
+}
+
+.subject-list ul {
+  list-style-type: none;
+  padding: 0;
   
-  .icons {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
+}
+
+.subject-list li {
+  margin-bottom: 5px;
   
-  .icon-pencil,
-  .icon-close {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  
-  .icon-pencil::before {
-    content: '\270E'; /* Unicode do ícone de lápis */
-    font-size: 20px;
-    color: #014991; /* Azul escuro */
-  }
-  
-  .icon-close::before {
-    content: '\2716'; /* Unicode do ícone de X */
-    font-size: 20px;
-    color: #990000; /* Vermelho escuro */
-  }
-  
-  .subject-info {
-    display: block;
-    flex-wrap: wrap;
-  }
-    
-  .subject-detail {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 5px;
-    text-align: left;
-    display: flex;
-  }
-  
-  .subject-detail label {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .subject-list {
-    margin-top: 20px;
-  }
-  
-  .subject-list h3 {
-    color: #333;
-  }
-  
-  .subject-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .subject-list li {
-    margin-bottom: 5px;
-  }
-    
-    
-    
+}
+
+.button button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button button:hover {
+  background-color: #45a049;
+}

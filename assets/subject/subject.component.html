@@ -1,15 +1,16 @@
 
-    <h2>Matérias:</h2>
+   
     <div class="subject-info">
+      <h2>Matérias:</h2>
         <div class="subject-detail">
 
-      <div class="subjects-list">
-        <h3>Matérias</h3>
-
-        <a class="icon-pencil" routerLink="/student-edit"></a>
-          <li *ngFor="let subject of aluno.subjects">{{subject}}</li>
-      </div>
+          <div class="student-subjects">
+            <ul>
+              <li *ngFor="let subject of aluno.subjects">{{subject}}</li>
+            </ul>
+          </div>
+          <div class="button">
+            <button routerLink="/student-profile">Voltar</button>
+          </div>
       
     </div>
-    , initial-scale=1.0">
-  <title>Document</title>
