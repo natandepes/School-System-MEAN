@@ -6,4 +6,5 @@ export class Student{
     public email: string;
     public gender: string;
     public password: string;
+    public _id: string;
 }

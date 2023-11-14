@@ -13,7 +13,7 @@ export class SignUpComponent {
 
     signUpForm: FormGroup;
 
-    constructor(private authService: AuthService, private formBuilder: FormBuilder) {
+    constructor(private authService: AuthService, private formBuilder: FormBuilder, private router: Router) {
         this.signUpForm = this.formBuilder.group({
             cpf: ['', [Validators.required, Validators.minLength(11), Validators.maxLength(11)]],
             name: ['', Validators.required],
@@ -76,7 +76,11 @@ export class SignUpComponent {
       this.authService.createUser(this.newStudent(form))
       .subscribe
       (
-        dadosSucesso => console.log('Cadastro Sucesso:', dadosSucesso),
+        dadosSucesso => 
+        {
+          console.log('Cadastro Sucesso:', dadosSucesso);
+          this.router.navigate(['/login']);
+        },
         dadosErro => console.log('Cadastro Erro:', dadosErro)
       );
     }  

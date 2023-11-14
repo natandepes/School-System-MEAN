@@ -40,6 +40,7 @@ export class AuthService {
         st.name = user.name;
         st.password = user.password;
         st.telephone = user.telephone;
+        st._id = user._id;
 
         return st;
     }

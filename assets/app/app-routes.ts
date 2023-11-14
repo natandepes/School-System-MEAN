@@ -11,8 +11,8 @@ import { StudentProfileComponent } from '../student/student-profile/student-prof
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignUpComponent }, 
-  { path: 'messages', component: MessageComponent },
-  { path: 'aluno', component: StudentComponent },
+  { path: 'anotacoes', component: MessageComponent },
+  { path: 'aluno/:id', component: StudentComponent },
   { path: 'materias', component: SubjectComponent },
   {path: 'student-edit', component: StudentEditComponent},
   { path: '', redirectTo: '/login', pathMatch:'full' }

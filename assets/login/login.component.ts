@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
 
         this.allUsers.forEach(std => {
             if(form.username == std.name && form.password == std.password){
-                this.router.navigate(['/aluno']);
+                this.router.navigate(['/aluno', std._id]);
                 this.login.emit();
             }
         });

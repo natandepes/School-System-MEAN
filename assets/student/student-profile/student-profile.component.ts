@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Student } from "../../../models-ts/student";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-student-profile',
@@ -7,23 +9,8 @@ import { Component } from "@angular/core";
 })
 export class StudentProfileComponent {
 
-    consola(){
-        console.log('teste')
-    }
+    constructor(private router: Router){}
+
+    @Input() aluno: Student;
    
-    aluno={
-        cpf: 12345678901,
-        nome: "Josélios III",
-        adress: "Rua dos Bobos, n0",
-        telephone: "9 3333-4444",
-        email: "joseliosiii@bol.com",
-        gender: "redpill",
-        subjects: [
-                    "Super Aula", 
-                    "Introdução ao Stack Overflow",
-                    "Dissertações sobre a importância de descomentar para o funcionamento de aplicações",
-                    "Estatística Freestyle",
-                    "1001 Utilidades para a expressão 'Na verdade...' "
-        ]
-    }
 };
