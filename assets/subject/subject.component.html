@@ -1,1 +1,16 @@
-<h1>Subject Component works!</h1>
+
+   
+    <div class="subject-info">
+      <h2>Matérias:</h2>
+        <div class="subject-detail">
+
+          <div class="student-subjects">
+            <ul>
+              <li *ngFor="let subject of aluno.subjects">{{subject}}</li>
+            </ul>
+          </div>
+          <div class="button">
+            <button routerLink="/student-profile">Voltar</button>
+          </div>
+      
+    </div>

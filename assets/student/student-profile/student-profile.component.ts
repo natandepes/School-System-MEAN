@@ -1,12 +1,16 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'app-subject',
-    templateUrl: './subject.component.html',
-    styleUrls: ['./subject.component.css']
+    selector: 'app-student-profile',
+    templateUrl: './student-profile.component.html',
+    styleUrls: ['./student-profile.component.css']
 })
-export class SubjectComponent {
+export class StudentProfileComponent {
 
+    consola(){
+        console.log('teste')
+    }
+   
     aluno={
         cpf: 12345678901,
         nome: "Josélios III",
@@ -22,4 +26,4 @@ export class SubjectComponent {
                     "1001 Utilidades para a expressão 'Na verdade...' "
         ]
     }
-}
+};

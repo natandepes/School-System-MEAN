@@ -1,4 +1,4 @@
-.subject-container {
+.student-container {
   position: relative;
   background-color: #fff;
   border-radius: 5px;
@@ -34,48 +34,40 @@
   color: #990000; /* Vermelho escuro */
 }
 
-.subject-info {
-  margin-top: 25px;
+
+.student-info {
+  border: 1px solid #ddd;
   display: flex;
-  flex-wrap: wrap;
-  background-color: #fff;
   flex-direction: column;
-  padding: 10px;
 }
 
-
-.subject-detail {
-  flex: 1;
+.student-detail {
+  display: flex;
+  flex-direction: row;
   padding: 10px;
-  border: 1px solid #ddd;
   border-radius: 5px;
+  padding-bottom: 25px;
   margin: 5px;
   text-align: left;
-  font-size: 18px;
 }
 
-
-.subject-list {
-  margin-top: 20px;
-  padding: 5px;
-}
-
-.subject-list h3 {
+.student-detail label {
+  font-weight: bold;
+  font-size: 24px;
   color: #333;
 }
 
-.subject-list ul {
-  list-style-type: none;
-  padding: 0;
-  
+.student-detail span {
+  font-size: 16px;
+  padding-left: 5px;
+  margin-top: 9px;
 }
 
-.subject-list li {
-  margin-bottom: 5px;
-  
+.student-subjects {
+  margin-top: 20px;
 }
 
-.button button {
+.student-subjects button {
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -84,6 +76,7 @@
   cursor: pointer;
 }
 
-.button button:hover {
+.student-subjects button:hover {
   background-color: #45a049;
 }
+

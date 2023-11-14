@@ -1,12 +1,11 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'app-subject',
-    templateUrl: './subject.component.html',
-    styleUrls: ['./subject.component.css']
+    selector: 'app-student-edit',
+    templateUrl: './student-edit.component.html',
+    styleUrls: ['./student-edit.component.css']
 })
-export class SubjectComponent {
-
+export class StudentEditComponent {
     aluno={
         cpf: 12345678901,
         nome: "Josélios III",
@@ -22,4 +21,5 @@ export class SubjectComponent {
                     "1001 Utilidades para a expressão 'Na verdade...' "
         ]
     }
-}
+    
+};
